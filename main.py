@@ -21,3 +21,7 @@ async def status(ingestion_id: str):
     if not status:
         return {"error": "Invalid ingestion_id"}
     return status
+
+@app.get("/")
+async def root():
+    return {"message": "API is running! Go to /docs for API docs."}
